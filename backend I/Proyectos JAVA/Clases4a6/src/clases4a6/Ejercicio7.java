@@ -19,7 +19,7 @@ public class Ejercicio7 {
             System.out.println("Ingrese su " + ++i + "º cadena: ");
             cadena = leer.nextLine();
             longitud = cadena.length();
-            if (longitud<=5 || longitud>=2){
+            if (longitud<=5 && longitud>=2){
                 if (cadena.substring(0,1).equals("X")){
                     if (cadena.substring(longitud-1).equals("O")){
                         cCorr++;

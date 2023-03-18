@@ -1,0 +1,7 @@
+abrir u torrent
+
+magnet:?xt=urn:btih:c3da727090c81637579e41743ec30dec221a7401&dn=The.Whale.2022.2160p.AMZN.WEB-DL.x265.8bit.SDR.DDP5.1.Atmos-FLUX&tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&tr=udp%3A%2F%2F9.rarbg.me%3A2940&tr=udp%3A%2F%2F9.rarbg.to%3A2970&tr=udp%3A%2F%2Ftracker.fatkhoala.org%3A13770&tr=udp%3A%2F%2Ftracker.tallpenguin.org%3A15780
+
+magnet:?xt=urn:btih:a0676b0af24bf87ee7c611b02d5d1fc3fd00c58a&dn=The.Whale.2022.1080p.WEBRip.x265-RARBG&tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&tr=udp%3A%2F%2F9.rarbg.me%3A2940&tr=udp%3A%2F%2F9.rarbg.to%3A2770&tr=udp%3A%2F%2Ftracker.tallpenguin.org%3A15790&tr=udp%3A%2F%2Ftracker.thinelephant.org%3A12760
+
+https://github.com/marcelaborgarello

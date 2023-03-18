@@ -23,16 +23,16 @@ public class Ejercicio6 {
             op = leer.nextByte();
             switch (op) {
                 case 1:
-                    System.out.println("La suma de los números es: " + (num1+num2));
+                    System.out.println("La suma de los números es: " + (num1 + num2));
                     break;
                 case 2:
-                    System.out.println("La resta de los números es: " + (num1-num2));
+                    System.out.println("La resta de los números es: " + (num1 - num2));
                     break;
                 case 3:
-                    System.out.println("El producto de los números es: " + (num1*num2));
+                    System.out.println("El producto de los números es: " + (num1 * num2));
                     break;
                 case 4:
-                    System.out.println("La división de los números es: " + (double)num1/num2);
+                    System.out.println("La división de los números es: " + (double) num1 / num2);
                     break;
                 case 5:
                     System.out.print("Está seguro de salir?(s/n): ");
@@ -41,6 +41,6 @@ public class Ejercicio6 {
                 default:
                     System.out.println("Por favor ingrese una opción válida: ");
             }
-        }while(!conf.equalsIgnoreCase("s"));
+        } while (!conf.equalsIgnoreCase("s"));
     }
 }
