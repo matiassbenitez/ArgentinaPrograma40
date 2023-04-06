@@ -1,0 +1,259 @@
+Teorico: Arreglos.
+Algoritmo Vectores
+    Definir vector Como Entero
+    Dimension vector[5]
+    vector[0] = 1
+    vector[1] = 2
+    vector[2] = 3
+    vector[3] = 4
+    vector[4] = 5
+FinAlgoritmo
+------------------------------------------------
+Algoritmo ejercicio_1
+	Definir vector,i Como Entero
+	Dimension vector[5]
+	Escribir "Ingrese 5 valores:"
+	Para i<-0 Hasta 4 Con Paso 1 Hacer
+		Leer vector[i]
+	Fin Para
+	Escribir "Los valores ingresados son: "
+	Para i<-0 Hasta 4 Con Paso 1 Hacer
+		Escribir Sin Saltar vector[i] " / "
+	Fin Para
+FinAlgoritmo
+---------------------------------------------------
+Algoritmo ejercicio_2
+	Definir vector,i,suma,resta,multi Como Entero
+	Dimension vector[10]
+	Escribir "Ingrese 10 valores:"
+	Para i<-0 Hasta 9 Con Paso 1 Hacer
+		Leer vector[i]
+	Fin Para
+	suma = 0
+	resta = 0
+	multi = 1
+	Para i<-0 Hasta 9 Con Paso 1 Hacer
+		suma = suma + vector[i] 
+		resta = resta - vector[i]
+		multi = multi * vector[i]
+	Fin Para
+	Escribir "La suma total es: " suma
+	Escribir "La resta total es: " resta
+	Escribir "La multiplicacion total es: " multi
+FinAlgoritmo
+---------------------------------------------------
+Algoritmo ejercicio_3
+	Definir N,i,vector Como Entero
+	Definir buscar ,j , indices_buscar,pos Como Entero
+	Escribir "Ingrese el tamaño del arreglo:"
+	Leer N
+	Escribir "Complete el arreglo: "
+	Dimension vector[N]
+	Para i<-0 Hasta N-1 Con Paso 1 Hacer
+		Leer vector[i]
+	Fin Para
+	Escribir "ingrese el valor que quiere encontrar: "
+	Leer buscar
+	j=0
+	Dimension indices_buscar[N]
+	Para i<-0 Hasta N-1 Con Paso 1 Hacer
+		Si vector[i] == buscar Entonces
+			indices_buscar[j] = i
+			j=j+1
+		FinSi
+	Fin Para
+	Si j > 0 Entonces ///encontro algo
+		Escribir "Se encontro en las posiciones:"
+		i=0
+		Mientras i<j Hacer
+			pos = indices_buscar[i] + 1
+			Escribir Sin Saltar pos " "
+			i=i+1
+		Fin Mientras
+	SiNo
+		Escribir "No se encontro el elemento en el arreglo."
+	FinSi
+	Escribir ""
+FinAlgoritmo
+---------------------------------------------------
+///completar vector: operacion =0(reseteo) =1(completar con n°aleatorios)
+SubProceso completar_vector(vector Por Referencia,largo_vector,operacion)
+	Definir i Como Entero
+	Si operacion==0 Entonces ///se resetea a 0
+		Para i<-0 Hasta largo_vector-1 Con Paso 1 Hacer
+			vector[i] = 0
+		Fin Para
+	FinSi
+	Si operacion==1 Entonces /// se completa con numeros aleatorios entre -100 y 100
+		Para i<-0 Hasta largo_vector-1 Con Paso 1 Hacer
+			vector[i] = Aleatorio(-100,100)
+		Fin Para
+	FinSi
+FinSubProceso
+///completar_vector_compuesto:utiliza 3 vectores.
+SubProceso completar_vector_compuesto(vectorA,vectorB,vectorC Por Referencia,largo_vector,operacion)
+	Definir i Como Entero
+	Para i<-0 Hasta largo_vector-1 Con Paso 1 Hacer
+		vectorC[i] = vectorB[i] + (vectorA[i] * operacion)
+	Fin Para
+FinSubProceso
+///Mostrar 
+SubProceso mostr(vector Por Referencia,largo_vector)
+	Definir i Como Entero
+	Para i<-0 Hasta largo_vector-1 Con Paso 1 Hacer
+		Escribir Sin Saltar vector[i]  " / "
+	Fin Para
+FinSubProceso
+///parte grafica de la pausa.
+SubProceso pausa()
+	Definir i Como Entero
+	Para i<-0 Hasta 3 Con Paso 1 Hacer
+		Esperar 1 Segundos
+		Escribir "."
+	Fin Para
+FinSubProceso
+///algoritmo principal
+Algoritmo ejercicio_4
+	Definir opc , opc_vector Como Caracter
+	Definir largo_vector,operacion Como Entero
+	Escribir "Ingrese el tamaño de los vectores: "
+	leer largo_vector
+	Definir vector_A , vector_B , vector_C Como Entero
+	Dimension  vector_A[largo_vector] , vector_B[largo_vector] , vector_C[largo_vector] 
+	completar_vector(vector_A,largo_vector,0)
+	completar_vector(vector_B,largo_vector,0)
+	completar_vector(vector_C,largo_vector,0)
+	Hacer
+		Escribir "---menu---"
+		Escribir "A) Llenar Vector A: Este vector es de tamaño N y se debe llenar de manera aleatoria"
+		Escribir "					   usando la función Aleatorio(valorMin, valorMax) de PseInt."
+		Escribir "B) Llenar Vector B: Este vector también es de tamaño N y se llena de manera aleatoria."
+		Escribir "C) Llenar Vector C: Con la suma de los vectores A y B. La suma se debe realizar elemento"
+		Escribir "					   a elemento. Ejemplo: C = A + B"
+		Escribir "D) Llenar Vector C: Con la resta de los vectores B y A. La resta se debe realizar elemento a"
+		Escribir "					   elemento. Ejemplo: C = B - A"
+		Escribir "E) Mostrar: Esta opción debe permitir al usuario decidir qué vector quiere mostrar: Vector A, B, o C."
+		Escribir "F) Salir."
+		Escribir "Ingrese su opcion: "
+		Leer opc
+		Segun Mayusculas(opc) Hacer
+			"A":
+				Escribir "Llenando el vector A "
+				pausa()
+				completar_vector(vector_A,largo_vector,1)
+			"B":
+				Escribir "Llenando el vector B "
+				pausa()
+				completar_vector(vector_B,largo_vector,1)
+			"C":
+				Escribir "Llenando el vector C: con la Suma"
+				pausa()
+				completar_vector_compuesto(vector_A,vector_B,vector_C,largo_vector,1)
+			"D":
+				Escribir "Llenando el vector C: con la Resta "
+				pausa()
+				completar_vector_compuesto(vector_A,vector_B,vector_C,largo_vector,-1)
+			"E":
+				Escribir "Seleccione que vector desea mostrar: "
+				Leer opc_vector
+				Segun Mayusculas(opc_vector) Hacer
+					"A":
+						mostr(vector_A,largo_vector)
+					"B":
+						mostr(vector_B,largo_vector)
+					"C":
+						mostr(vector_C,largo_vector)
+				Fin Segun
+				pausa()
+		Fin Segun
+	Mientras Que opc <> "F"
+FinAlgoritmo
+---------------------------------------------------
+Funcion val_max <- mas_grande(vector,largo_vector)
+	Definir val_max ,j Como Entero
+	val_max = vector[0]
+	Para j<-1 Hasta largo_vector-1 Con Paso 1 Hacer
+		Si vector[j] > val_max Entonces
+			val_max = vector[j]
+		FinSi
+	Fin Para
+FinFuncion
+Algoritmo ejercicio_5
+	Definir vector ,largo_vector,i Como Entero
+	Escribir "ingrese el tamaño del vector: "
+	Leer largo_vector
+	Dimension vector[largo_vector]
+	Escribir "Complete el arreglo: "
+	Para i<-0 Hasta largo_vector-1 Con Paso 1 Hacer
+		Leer vector[i]
+	Fin Para
+	Escribir "El valor mas grande del arreglo es: " mas_grande(vector,largo_vector)
+FinAlgoritmo
+---------------------------------------------------
+SubProceso completar_vector( vector Por Referencia,frase)
+	Definir i Como Entero
+	Para i<-0 Hasta 19 Con Paso 1 Hacer
+		Si i< Longitud(frase) Entonces
+			vector[i] = Subcadena(frase,i,i) 
+		SiNo 
+			vector[i] = " "
+		FinSi
+	Fin Para
+FinSubProceso
+SubProceso mostrar_vector (vector)
+	Definir i Como Entero
+	Para i<-0 Hasta 19 Con Paso 1 Hacer
+		Escribir Sin Saltar vector[i] 
+	Fin Para
+	Escribir ""
+FinSubProceso
+Algoritmo ejercicio_6
+	Definir vector,frase,caract Como Caracter
+	Definir pos como Entero
+	Dimension vector[20]
+	Escribir "Ingrese una frase para agregar al arreglo: "
+	Leer frase
+	completar_vector(vector,frase)
+	Escribir Sin Saltar "La frase ingresada es: " 
+	mostrar_vector(vector)
+	Escribir "Ingrese un caracter cualquiera: "
+	Leer caract
+	EScribir "Ingrese una posicion: "
+	Leer pos
+	Si vector[pos] == " " Entonces
+		vector[pos] = caract
+		mostrar_vector(vector)
+	SiNo
+		Escribir "La posicion estaba ocupada por: " vector[pos]
+	FinSi
+FinAlgoritmo
+---------------------------------------------------
+SubProceso completar_vector(vector Por Referencia,largo_vector)
+	Definir i Como Entero
+	Para i<-0 Hasta largo_vector-1 Con Paso 1 Hacer
+		vector[i] = Aleatorio(-100,100)
+	Fin Para
+FinSubProceso
+Funcion logic <- igualdad(vector1,vector2,largo_vector)
+	Definir logic Como Logico
+	logic = Verdadero
+	Definir i Como Entero
+	Para i<-0 Hasta largo_vector-1 Con Paso 1 Hacer
+		Si vector1[i] <> vector2[i] Entonces
+			logic =  Falso
+		FinSi
+	Fin Para
+FinFuncion
+Algoritmo ejercicio_7
+	Definir N ,vector_1 , vector_2 Como Entero
+	Escribir "Ingrese la longuitud de los arreglos: "
+	Leer N
+	Dimension vector_1[N] , vector_2[N]
+	completar_vector(vector_1,N)
+	completar_vector(vector_2,N)
+	Escribir "Todos sus valores sonm iguales: " igualdad(vector_1,vector_2,N)
+FinAlgoritmo
+
+---------------------------------------------------
+
+

@@ -1,0 +1,18 @@
+//Ejercicios extras 2
+//Realizar un programa que rellene un vector de tamaño N, con valores ingresados por el
+//usuario y muestre por pantalla el promedio de la suma de todos los valores ingresados.
+
+Algoritmo ejercicioExtras2
+	Definir tam , val , sum , i Como Entero
+	Escribir "Ingrese la cantidad de valores"
+	Leer tam
+	Dimension val(tam)
+	sum=0
+	Escribir"Ingrese los valores"
+	
+	Para i <- 0 hasta tam-1 Con Paso 1 Hacer
+		Leer val(i)
+		sum=val(i)+sum
+	FinPara
+	Escribir "El promedio de la suma de los valores ingresados " sum/tam
+FinAlgoritmo

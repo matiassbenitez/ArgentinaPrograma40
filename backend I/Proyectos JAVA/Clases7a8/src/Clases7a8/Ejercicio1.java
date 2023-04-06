@@ -11,7 +11,7 @@ import java.util.Scanner;
  */
 public class Ejercicio1 {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         Scanner leer = new Scanner(System.in);
         int a, b, op, res;

@@ -1,0 +1,4 @@
+1. Implementar una función que permita obtener un número entero aleatorio comprendido entre dos límites que introduciremos por teclado. El número obtenido se debe mostrar por pantalla.
+
+
+2. Implementar una función que permita obtener el valor absoluto de un número y otra que obtenga la raíz cuadrada. Para ello utilice las funciones abs() y rc() de PseInt.

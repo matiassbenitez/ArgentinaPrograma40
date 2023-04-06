@@ -1,0 +1,20 @@
+//Ejercicios extras 1
+//Realizar un programa que rellene dos vectores al mismo tiempo, con 5 valores aleatorios y los
+//muestre por pantalla.
+
+Algoritmo ejerciciosextras1
+	Definir vec , vec1 Como Entero
+	Definir i Como Entero
+	Dimension vec(5) , vec1(5)
+	Para i <- 0 Hasta 4 Con Paso 1 Hacer
+		vec(i)=Aleatorio(0,100)
+		vec1(i)=Aleatorio(0,100)
+	FinPara
+	Para i <- 0 Hasta 4 Con Paso 1 Hacer
+		Escribir Sin Saltar vec(i) " "
+	FinPara
+	Escribir ""
+	Para i <- 0 Hasta 4 Con Paso 1 Hacer
+		Escribir Sin Saltar vec1(i) " "
+	FinPara
+FinAlgoritmo

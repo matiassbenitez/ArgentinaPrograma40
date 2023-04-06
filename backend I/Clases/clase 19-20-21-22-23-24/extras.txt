@@ -1,0 +1,17 @@
+1) Crea una clase "Coche" con las propiedades "marca", "modelo" y "precio".
+Crea clase de servicio con los métodos "ingresarCoche" y "mostrarCoche".
+
+2) Crea una clase "Estudiante" con las propiedades "nombre", "edad" y "nota media".
+Crea un método en la clase de servicios para crear al estudiante, uno para mostrarlo y otro para mostrar por pantalla si el estudiante aprobó o no.
+
+3) Crea una clase "Mascota" con las propiedades "nombre", "edad", "raza" y "tipo" (perro, gato, etc.).
+Crea un constructor para inicializar los valores de las propiedades y en la clase servicio crear un método para agregar la mascota y otro para mostrar por pantalla la información de la mascota.
+También crea un método "cumplirAnios" que aumente en uno la edad de la mascota.
+
+4) Crea una clase "Ascensor" con las propiedades "pisoActual" y "maximoPisos".
+Crea un constructor para inicializar los valores de las propiedades.
+En la clase servicio:
+Crea un método "subir" que aumente en uno el valor de la propiedad "pisoActual" si aún no se ha alcanzado el "maximoPisos".
+Crea un método "bajar" que disminuya en uno el valor de la propiedad "pisoActual" si no se ha alcanzado el piso "0".
+Crea un método "irA" que reciba como parámetro el número de piso al que se desea ir y que modifique la propiedad "pisoActual" para que tenga ese valor.
+Crea un programa que cree un objeto "Ascensor" con un "maximoPisos" de 10. Simula el comportamiento del ascensor moviéndolo hacia arriba y hacia abajo,
