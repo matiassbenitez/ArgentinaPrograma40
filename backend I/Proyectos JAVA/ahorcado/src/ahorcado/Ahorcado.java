@@ -60,11 +60,18 @@ Mensaje: Lo sentimos, no hay más oportunidades
 */
 package ahorcado;
 
+import java.util.Arrays;
+
 
 public class Ahorcado {
 
     public static void main(String[] args) {
         
+        double [] arreglo = new double[50];
+        Arrays.fill(arreglo,0,49, Math.random());
+        for (double d : arreglo) {
+            System.out.println(d);
+        }
     }
 
 }
