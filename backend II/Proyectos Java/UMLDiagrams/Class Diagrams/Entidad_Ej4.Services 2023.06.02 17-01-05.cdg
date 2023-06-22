@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Entidad_Ej4.Services">
+  <ClassDiagramComponents>
+    <Class name="ServiceEstudiantes" package="Entidad_Ej4.Services" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="sc" type="ServicesEmpleados" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="crearEst" returnType="Estudiante" visibility="public"/>
+        <Method name="crearEstxMat" returnType="Estudiante" visibility="public"/>
+        <Method name="CrearMateria" returnType="String" visibility="public"/>
+        <Method name="CambiarCarrera" returnType="void" visibility="public">
+          <Argument type="Estudiante" name="e1"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ServicePersona" package="Entidad_Ej4.Services" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="leer" type="Scanner" visibility="package" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="crearPersona" returnType="Personas" visibility="public"/>
+        <Method name="Estado" returnType="String" visibility="public">
+          <Argument type="int" name="cont"/>
+        </Method>
+        <Method name="MostrarEstados" returnType="void" visibility="public"/>
+        <Method name="crearNombre" returnType="String" visibility="public">
+          <Argument type="String" name="sex"/>
+        </Method>
+        <Method name="NombreH" returnType="String" visibility="public"/>
+        <Method name="NombreM" returnType="String" visibility="public"/>
+        <Method name="NombreMixto" returnType="String" visibility="public">
+          <Argument type="int" name="random"/>
+        </Method>
+        <Method name="crearApell" returnType="String" visibility="public"/>
+        <Method name="crearSexo" returnType="Sexo" visibility="public">
+          <Argument type="String" name="sex"/>
+        </Method>
+        <Method name="MostrarSexo" returnType="void" visibility="public"/>
+        <Method name="cambioEstado" returnType="void" visibility="public">
+          <Argument type="Personas" name="p1"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Services" package="Entidad_Ej4.Services" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields>
+        <Field name="leer" type="Scanner" visibility="package" isStatic="true"/>
+        <Field name="scemp" type="ServicesEmpleados" visibility="package"/>
+        <Field name="scp" type="ServicePersona" visibility="package"/>
+        <Field name="scest" type="ServiceEstudiantes" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="crearFacult" returnType="Facultad" visibility="public">
+          <Argument type="HashSet&lt;Personas&gt;" name="est"/>
+          <Argument type="HashSet&lt;Empleados&gt;" name="perS"/>
+          <Argument type="HashSet&lt;Empleados&gt;" name="prof"/>
+        </Method>
+        <Method name="crearListEstud" returnType="void" visibility="public">
+          <Argument type="HashSet&lt;Personas&gt;" name="est"/>
+          <Argument type="int" name="cont"/>
+        </Method>
+        <Method name="crearListPerSer" returnType="void" visibility="public">
+          <Argument type="HashSet&lt;Empleados&gt;" name="perS"/>
+          <Argument type="int" name="cont"/>
+        </Method>
+        <Method name="crearListProfes" returnType="void" visibility="public">
+          <Argument type="HashSet&lt;Empleados&gt;" name="prof"/>
+          <Argument type="int" name="cont"/>
+        </Method>
+        <Method name="MostrarEstudiantes" returnType="void" visibility="public">
+          <Argument type="HashSet&lt;Personas&gt;" name="est"/>
+        </Method>
+        <Method name="SeleccionarEst" returnType="void" visibility="public">
+          <Argument type="HashSet&lt;Personas&gt;" name="est"/>
+        </Method>
+        <Method name="MostrarPerServ" returnType="void" visibility="public">
+          <Argument type="HashSet&lt;Empleados&gt;" name="perS"/>
+        </Method>
+        <Method name="SeleccionarPservicio" returnType="void" visibility="public">
+          <Argument type="HashSet&lt;Empleados&gt;" name="perS"/>
+        </Method>
+        <Method name="MostrarProfesores" returnType="void" visibility="public">
+          <Argument type="HashSet&lt;Empleados&gt;" name="prof"/>
+        </Method>
+        <Method name="SeleccionarProfesor" returnType="void" visibility="public">
+          <Argument type="HashSet&lt;Empleados&gt;" name="profe"/>
+        </Method>
+        <Method name="CambioOpcionEstud" returnType="void" visibility="public">
+          <Argument type="Estudiante" name="e1"/>
+        </Method>
+        <Method name="CambioOpcionProfe" returnType="void" visibility="public">
+          <Argument type="Profesores" name="p1"/>
+        </Method>
+        <Method name="CambioOpcionPersServ" returnType="void" visibility="public">
+          <Argument type="PServicio" name="p1"/>
+        </Method>
+        <Method name="MostrarLEst" returnType="void" visibility="public">
+          <Argument type="HashSet&lt;Personas&gt;" name="est"/>
+        </Method>
+        <Method name="MostrarLProf" returnType="void" visibility="public">
+          <Argument type="HashSet&lt;Empleados&gt;" name="prof"/>
+        </Method>
+        <Method name="MostrarLPserv" returnType="void" visibility="public">
+          <Argument type="HashSet&lt;Empleados&gt;" name="perS"/>
+        </Method>
+        <Method name="Menu" returnType="void" visibility="public">
+          <Argument type="Facultad" name="f1"/>
+        </Method>
+        <Method name="BuscarEstxMat" returnType="void" visibility="public">
+          <Argument type="HashSet&lt;Personas&gt;" name="est"/>
+        </Method>
+        <Method name="BuscarProfxMat" returnType="void" visibility="public">
+          <Argument type="HashSet&lt;Empleados&gt;" name="profe"/>
+        </Method>
+        <Method name="BuscarPerSxArea" returnType="void" visibility="public">
+          <Argument type="HashSet&lt;Empleados&gt;" name="perS"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ServicesEmpleados" package="Entidad_Ej4.Services" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="crearProf" returnType="Profesores" visibility="public"/>
+        <Method name="crearProfxMat" returnType="Profesores" visibility="public"/>
+        <Method name="crearEmpleado" returnType="Empleados" visibility="public"/>
+        <Method name="CrearMateria" returnType="String" visibility="public"/>
+        <Method name="crearPserv" returnType="PServicio" visibility="public"/>
+        <Method name="crearPservxArea" returnType="PServicio" visibility="public"/>
+        <Method name="Servi" returnType="String" visibility="public"/>
+        <Method name="MostrarServiP" returnType="void" visibility="public"/>
+        <Method name="MostrarMateria" returnType="void" visibility="public"/>
+        <Method name="cambioMateria" returnType="String" visibility="public"/>
+        <Method name="auxCambMat" returnType="String" visibility="public">
+          <Argument type="int" name="num"/>
+        </Method>
+        <Method name="cambioServicio" returnType="String" visibility="public"/>
+        <Method name="auxCambSer" returnType="String" visibility="public">
+          <Argument type="int" name="num"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="scest" source="Entidad_Ej4.Services.Services" target="Entidad_Ej4.Services.ServiceEstudiantes" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="scp" source="Entidad_Ej4.Services.Services" target="Entidad_Ej4.Services.ServicePersona" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Entidad_Ej4.Services.ServiceEstudiantes" target="Entidad_Ej4.Services.ServicePersona"/>
+    <IsRelation name="is" source="Entidad_Ej4.Services.ServicesEmpleados" target="Entidad_Ej4.Services.ServicePersona"/>
+    <HasRelation name="sc" source="Entidad_Ej4.Services.ServiceEstudiantes" target="Entidad_Ej4.Services.ServicesEmpleados" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="scemp" source="Entidad_Ej4.Services.Services" target="Entidad_Ej4.Services.ServicesEmpleados" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

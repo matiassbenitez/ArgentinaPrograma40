@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Guia11ej2">
+  <ClassDiagramComponents>
+    <Class name="Juego" package="guia11ej2.entidades" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="jugadores" type="ArrayList&lt;Jugador&gt;" visibility="package"/>
+        <Field name="r" type="Revolver" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="ArrayList&lt;Jugador&gt;" name="jugadores"/>
+          <Argument type="Revolver" name="r"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Jugador" package="guia11ej2.entidades" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="id" type="int" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="mojado" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="id"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="int" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="isMojado" returnType="boolean" visibility="public"/>
+        <Method name="setMojado" returnType="void" visibility="public">
+          <Argument type="boolean" name="mojado"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="disparo" returnType="boolean" visibility="public">
+          <Argument type="Revolver" name="r"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Revolver" package="guia11ej2.entidades" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields>
+        <Field name="posicionActual" type="int" visibility="private"/>
+        <Field name="posicionAgua" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="posicionActual"/>
+          <Argument type="int" name="posicionAgua"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getPosicionActual" returnType="int" visibility="public"/>
+        <Method name="setPosicionActual" returnType="void" visibility="public">
+          <Argument type="int" name="posicionActual"/>
+        </Method>
+        <Method name="getPosicionAgua" returnType="int" visibility="public"/>
+        <Method name="setPosicionAgua" returnType="void" visibility="public">
+          <Argument type="int" name="posicionAgua"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="llenarRevolver" returnType="void" visibility="public"/>
+        <Method name="mojar" returnType="boolean" visibility="public"/>
+        <Method name="siguienteChorro" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Guia11ej2" package="guia11ej2" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="jugadores" source="guia11ej2.entidades.Juego" target="guia11ej2.entidades.Jugador" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Jugador&gt;"/>
+    <UseRelation source="guia11ej2.entidades.Jugador" target="guia11ej2.entidades.Revolver" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="r" source="guia11ej2.entidades.Juego" target="guia11ej2.entidades.Revolver" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

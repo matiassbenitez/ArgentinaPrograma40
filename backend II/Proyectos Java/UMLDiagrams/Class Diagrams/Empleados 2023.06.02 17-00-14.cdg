@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Empleados">
+  <ClassDiagramComponents>
+    <Class name="Empleados" package="Entidad_Ej4" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields>
+        <Field name="anio" type="int" visibility="protected"/>
+        <Field name="despacho" type="int" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="anio"/>
+          <Argument type="int" name="despacho"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="apell"/>
+          <Argument type="Sexo" name="sex"/>
+          <Argument type="int" name="numIdent"/>
+          <Argument type="String" name="estado"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getAnio" returnType="int" visibility="public"/>
+        <Method name="setAnio" returnType="void" visibility="public">
+          <Argument type="int" name="anio"/>
+        </Method>
+        <Method name="getDespacho" returnType="int" visibility="public"/>
+        <Method name="setDespacho" returnType="void" visibility="public">
+          <Argument type="int" name="despacho"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

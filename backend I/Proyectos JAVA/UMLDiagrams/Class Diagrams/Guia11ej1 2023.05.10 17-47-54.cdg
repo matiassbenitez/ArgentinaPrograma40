@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Guia11ej1">
+  <ClassDiagramComponents>
+    <Class name="Perro" package="guia11ej1.entidades" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="raza" type="String" visibility="private"/>
+        <Field name="edad" type="int" visibility="private"/>
+        <Field name="tamanio" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="raza"/>
+          <Argument type="int" name="edad"/>
+          <Argument type="String" name="tamanio"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getRaza" returnType="String" visibility="public"/>
+        <Method name="setRaza" returnType="void" visibility="public">
+          <Argument type="String" name="raza"/>
+        </Method>
+        <Method name="getEdad" returnType="int" visibility="public"/>
+        <Method name="setEdad" returnType="void" visibility="public">
+          <Argument type="int" name="edad"/>
+        </Method>
+        <Method name="getTamanio" returnType="String" visibility="public"/>
+        <Method name="setTamanio" returnType="void" visibility="public">
+          <Argument type="String" name="tamanio"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Persona" package="guia11ej1.entidades" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="apellido" type="String" visibility="private"/>
+        <Field name="edad" type="int" visibility="private"/>
+        <Field name="dni" type="String" visibility="private"/>
+        <Field name="perro" type="Perro" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="apellido"/>
+          <Argument type="int" name="edad"/>
+          <Argument type="String" name="dni"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getApellido" returnType="String" visibility="public"/>
+        <Method name="setApellido" returnType="void" visibility="public">
+          <Argument type="String" name="apellido"/>
+        </Method>
+        <Method name="getEdad" returnType="int" visibility="public"/>
+        <Method name="setEdad" returnType="void" visibility="public">
+          <Argument type="int" name="edad"/>
+        </Method>
+        <Method name="getDni" returnType="String" visibility="public"/>
+        <Method name="setDni" returnType="void" visibility="public">
+          <Argument type="String" name="dni"/>
+        </Method>
+        <Method name="getPerro" returnType="Perro" visibility="public"/>
+        <Method name="setPerro" returnType="void" visibility="public">
+          <Argument type="Perro" name="perro"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Guia11ej1" package="guia11ej1" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Servicio" package="guia11ej1.servicios" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields>
+        <Field name="leer" type="Scanner" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="elegirMascota" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Persona&gt;" name="personas"/>
+          <Argument type="ArrayList&lt;Perro&gt;" name="perros"/>
+        </Method>
+        <Method name="mostrar" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Persona&gt;" name="personas"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="guia11ej1.servicios.Servicio" target="guia11ej1.entidades.Persona" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="perro" source="guia11ej1.entidades.Persona" target="guia11ej1.entidades.Perro" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="guia11ej1.entidades.Persona" target="guia11ej1.entidades.Perro" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

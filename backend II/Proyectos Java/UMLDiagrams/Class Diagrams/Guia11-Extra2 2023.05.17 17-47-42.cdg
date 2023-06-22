@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Guia11-Extra2">
+  <ClassDiagramComponents>
+    <Class name="Asiento" package="" visibility="public" xPosition="134.0" yPosition="486.0">
+      <Fields>
+        <Field name="fila" type="int" visibility="package"/>
+        <Field name="columna" type="String" visibility="package"/>
+        <Field name="persona" type="Espectador" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="fila"/>
+          <Argument type="String" name="columna"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getFila" returnType="int" visibility="public"/>
+        <Method name="setFila" returnType="void" visibility="public">
+          <Argument type="int" name="fila"/>
+        </Method>
+        <Method name="getColumna" returnType="String" visibility="public"/>
+        <Method name="setColumna" returnType="void" visibility="public">
+          <Argument type="String" name="columna"/>
+        </Method>
+        <Method name="getPersona" returnType="Espectador" visibility="public"/>
+        <Method name="setPersona" returnType="void" visibility="public">
+          <Argument type="Espectador" name="persona"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Cine" package="" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="pelicula" type="Pelicula" visibility="private"/>
+        <Field name="sala" type="Sala" visibility="private"/>
+        <Field name="precioEntrada" type="float" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Pelicula" name="pelicula"/>
+          <Argument type="Sala" name="sala"/>
+          <Argument type="float" name="precioEntrada"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getPelicula" returnType="Pelicula" visibility="public"/>
+        <Method name="setPelicula" returnType="void" visibility="public">
+          <Argument type="Pelicula" name="pelicula"/>
+        </Method>
+        <Method name="getSala" returnType="Sala" visibility="public"/>
+        <Method name="setSala" returnType="void" visibility="public">
+          <Argument type="Sala" name="sala"/>
+        </Method>
+        <Method name="getPrecioEntrada" returnType="float" visibility="public"/>
+        <Method name="setPrecioEntrada" returnType="void" visibility="public">
+          <Argument type="float" name="precioEntrada"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Espectador" package="" visibility="public" xPosition="1009.0" yPosition="501.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="package"/>
+        <Field name="edad" type="int" visibility="package"/>
+        <Field name="dinero" type="float" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="int" name="edad"/>
+          <Argument type="float" name="dinero"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getEdad" returnType="int" visibility="public"/>
+        <Method name="setEdad" returnType="void" visibility="public">
+          <Argument type="int" name="edad"/>
+        </Method>
+        <Method name="getDinero" returnType="float" visibility="public"/>
+        <Method name="setDinero" returnType="void" visibility="public">
+          <Argument type="float" name="dinero"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Main" package="" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Pelicula" package="" visibility="public" xPosition="1113.0" yPosition="105.0">
+      <Fields>
+        <Field name="titulo" type="String" visibility="package"/>
+        <Field name="minutos" type="int" visibility="package"/>
+        <Field name="director" type="String" visibility="package"/>
+        <Field name="edadMinima" type="int" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="titulo"/>
+          <Argument type="int" name="minutos"/>
+          <Argument type="String" name="director"/>
+          <Argument type="int" name="edadMinima"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getTitulo" returnType="String" visibility="public"/>
+        <Method name="setTitulo" returnType="void" visibility="public">
+          <Argument type="String" name="titulo"/>
+        </Method>
+        <Method name="getMinutos" returnType="int" visibility="public"/>
+        <Method name="setMinutos" returnType="void" visibility="public">
+          <Argument type="int" name="minutos"/>
+        </Method>
+        <Method name="getDirector" returnType="String" visibility="public"/>
+        <Method name="setDirector" returnType="void" visibility="public">
+          <Argument type="String" name="director"/>
+        </Method>
+        <Method name="getEdadMinima" returnType="int" visibility="public"/>
+        <Method name="setEdadMinima" returnType="void" visibility="public">
+          <Argument type="int" name="edadMinima"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Sala" package="" visibility="public" xPosition="55.0" yPosition="315.0">
+      <Fields>
+        <Field name="listadeObjetillos" type="Asiento[][]" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getListadeObjetillos" returnType="Asiento[][]" visibility="public"/>
+        <Method name="setListadeObjetillos" returnType="void" visibility="public">
+          <Argument type="Asiento[][]" name="listadeObjetillos"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Servicio" package="" visibility="public" xPosition="670.0" yPosition="342.0">
+      <Fields>
+        <Field name="lista" type="ArrayList&lt;Espectador&gt;" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="crearEspectadores" returnType="void" visibility="public"/>
+        <Method name="controlar" returnType="void" visibility="public">
+          <Argument type="Cine" name="cine"/>
+        </Method>
+        <Method name="mostrarSala" returnType="void" visibility="public">
+          <Argument type="Cine" name="cine"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="Cine" target="Sala" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="lista" source="Servicio" target="Espectador" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Espectador&gt;"/>
+    <HasRelation name="sala" source="Cine" target="Sala" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="pelicula" source="Cine" target="Pelicula" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="persona" source="Asiento" target="Espectador" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Asiento" target="Espectador" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Servicio" target="Cine" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Sala" target="Asiento" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Cine" target="Pelicula" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

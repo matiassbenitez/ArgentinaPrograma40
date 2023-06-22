@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Facultad">
+  <ClassDiagramComponents>
+    <Class name="Facultad" package="Entidad_Ej4" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="NombreFacult" type="String" visibility="protected"/>
+        <Field name="PerServ" type="HashSet&lt;Empleados&gt;" visibility="protected"/>
+        <Field name="Profesores" type="HashSet&lt;Empleados&gt;" visibility="protected"/>
+        <Field name="Estudiantes" type="HashSet&lt;Personas&gt;" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="NombreFacult"/>
+          <Argument type="HashSet&lt;Empleados&gt;" name="PerServ"/>
+          <Argument type="HashSet&lt;Empleados&gt;" name="Profesores"/>
+          <Argument type="HashSet&lt;Personas&gt;" name="Estudiantes"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNombreFacult" returnType="String" visibility="public"/>
+        <Method name="setNombreFacult" returnType="void" visibility="public">
+          <Argument type="String" name="NombreFacult"/>
+        </Method>
+        <Method name="getPerServ" returnType="HashSet&lt;Empleados&gt;" visibility="public"/>
+        <Method name="setPerServ" returnType="void" visibility="public">
+          <Argument type="HashSet&lt;Empleados&gt;" name="PerServ"/>
+        </Method>
+        <Method name="getProfesores" returnType="HashSet&lt;Empleados&gt;" visibility="public"/>
+        <Method name="setProfesores" returnType="void" visibility="public">
+          <Argument type="HashSet&lt;Empleados&gt;" name="Profesores"/>
+        </Method>
+        <Method name="getEstudiantes" returnType="HashSet&lt;Personas&gt;" visibility="public"/>
+        <Method name="setEstudiantes" returnType="void" visibility="public">
+          <Argument type="HashSet&lt;Personas&gt;" name="Estudiantes"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

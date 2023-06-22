@@ -35,7 +35,7 @@ import java.util.Scanner;
 
 public class CursoService {
 
-    public static Scanner leer = new Scanner(System.in).useDelimiter("\n");
+    public static Scanner leer = new Scanner(System.in);
 
     public static void cargarAlumnos(Curso c) {
         String[] arreglo = new String[5];

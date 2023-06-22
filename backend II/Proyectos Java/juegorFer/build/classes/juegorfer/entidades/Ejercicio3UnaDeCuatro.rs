@@ -1,0 +1,2 @@
+juegoFer.entidades.Ejercicio3UnaDeCuatro
+juegorfer.entidades.Partida

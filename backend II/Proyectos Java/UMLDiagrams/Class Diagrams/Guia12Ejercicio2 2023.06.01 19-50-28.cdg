@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Guia12Ejercicio2">
+  <ClassDiagramComponents>
+    <Class name="Electrodomestico" package="Entidades" visibility="public" isAbstract="true" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="precio" type="double" visibility="protected"/>
+        <Field name="color" type="String" visibility="protected"/>
+        <Field name="consumo" type="char" visibility="protected"/>
+        <Field name="peso" type="double" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Double" name="precio"/>
+          <Argument type="String" name="color"/>
+          <Argument type="char" name="consumo"/>
+          <Argument type="double" name="peso"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getPrecio" returnType="double" visibility="public"/>
+        <Method name="setPrecio" returnType="void" visibility="public">
+          <Argument type="double" name="precio"/>
+        </Method>
+        <Method name="getColor" returnType="String" visibility="public"/>
+        <Method name="setColor" returnType="void" visibility="public">
+          <Argument type="String" name="color"/>
+        </Method>
+        <Method name="getConsumo" returnType="char" visibility="public"/>
+        <Method name="setConsumo" returnType="void" visibility="public">
+          <Argument type="char" name="consumo"/>
+        </Method>
+        <Method name="getPeso" returnType="double" visibility="public"/>
+        <Method name="setPeso" returnType="void" visibility="public">
+          <Argument type="double" name="peso"/>
+        </Method>
+        <Method name="comprobarConsumoEnergico" returnType="char" visibility="public">
+          <Argument type="char" name="letra"/>
+        </Method>
+        <Method name="comprobarColor" returnType="String" visibility="public">
+          <Argument type="String" name="color"/>
+        </Method>
+        <Method name="crearElectrodomestico" returnType="void" visibility="public"/>
+        <Method name="precioFinal" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Lavadora" package="Entidades" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="carga" type="double" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="double" name="carga"/>
+          <Argument type="double" name="precio"/>
+          <Argument type="String" name="color"/>
+          <Argument type="char" name="consumo"/>
+          <Argument type="double" name="peso"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCarga" returnType="double" visibility="public"/>
+        <Method name="setCarga" returnType="void" visibility="public">
+          <Argument type="double" name="carga"/>
+        </Method>
+        <Method name="crearLavadora" returnType="void" visibility="public"/>
+        <Method name="precioFinal" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Televisor" package="Entidades" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields>
+        <Field name="pulgadas" type="int" visibility="protected"/>
+        <Field name="TDT" type="boolean" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="pulgadas"/>
+          <Argument type="boolean" name="TDT"/>
+          <Argument type="Double" name="precio"/>
+          <Argument type="String" name="color"/>
+          <Argument type="char" name="consumo"/>
+          <Argument type="double" name="peso"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getPulgadas" returnType="int" visibility="public"/>
+        <Method name="setPulgadas" returnType="void" visibility="public">
+          <Argument type="int" name="pulgadas"/>
+        </Method>
+        <Method name="isTDT" returnType="boolean" visibility="public"/>
+        <Method name="setTDT" returnType="void" visibility="public">
+          <Argument type="boolean" name="TDT"/>
+        </Method>
+        <Method name="crearTelevisor" returnType="void" visibility="public"/>
+        <Method name="precioFinal" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Guia12Ejercicio2" package="Guia12ejercicio2" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="Entidades.Lavadora" target="Entidades.Electrodomestico"/>
+    <IsRelation name="is" source="Entidades.Televisor" target="Entidades.Electrodomestico"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
