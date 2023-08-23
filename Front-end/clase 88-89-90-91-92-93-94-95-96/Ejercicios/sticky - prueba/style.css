@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+}
+
+.fondo1{
+    height: 1500px;
+    color: aliceblue;
+}
+.fondo2{
+    height: 4000px;
+}
+.fondo3{
+    height: 3000px;
+}
+
+.bg{
+    z-index: -1;
+    position: sticky;
+    top: 0px;
+}
+
+.texto{
+    transform: translateZ(0.5px);
+    color: aliceblue;
+}

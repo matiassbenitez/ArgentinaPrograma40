@@ -1,0 +1,37 @@
+:root {
+  --inicioanimacion: 0;
+  --finanimacion: -100%;
+}
+
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  margin: 20px;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  width: 400px;
+  /* overflow: hidden; */
+  transition: transform 0.9s ease-in-out; /* Agregamos una transición suave */
+}
+
+.carousel img {
+  width: 100%;
+  height: auto;
+  /* animation: mover 2s ;
+  animation-fill-mode: forwards; */
+}
+
+/* @keyframes mover {
+  0% { transform: translateX(var(--inicioanimacion)); }
+  100% { transform: translateX(var(--finanimacion)); }
+} */
+
+#prevBtn,
+#nextBtn {
+  margin: 0 10px;
+}

@@ -1,0 +1,62 @@
+/* *{
+    margin: 0px;
+    padding: 0px;
+} */
+
+body .back-image{
+    background-image: linear-gradient(white, transparent), url(imagenes/fondo.jpg);
+    background-size: cover;
+    min-height: 100vh;
+}
+
+h1, form{
+    margin: 20px;
+}
+
+.img-fluid{
+    opacity: 15%;
+}
+
+.container-fluid{
+    background-image: linear-gradient(grey, lightgrey);
+}
+
+.producto{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card{
+    justify-self: center;
+    border: none;
+    background-color: transparent;
+}
+
+.botones{
+    align-self: center;
+    width: max-content;
+}
+
+.btn{
+    border-radius: 0;
+}
+
+.card-body{
+    margin: 10px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    width: fit-content;
+    border: 2px solid lightslategrey;
+}
+
+.card-img-top{
+    margin: 10px;
+}
+#barra{
+    --bs-navbar-padding-y: 0;
+}
+
+

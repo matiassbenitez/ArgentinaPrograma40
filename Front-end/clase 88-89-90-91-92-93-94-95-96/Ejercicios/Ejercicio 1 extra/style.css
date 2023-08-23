@@ -1,0 +1,19 @@
+table, th, td{
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid;
+    border-color: #333;
+    border-collapse: collapse;
+}
+
+.title{
+    background-image: url(imagenes/fondo_gris.gif);
+    text-align: center;
+}
+
+.moneda{
+    background-color: #e6f3ff;
+    text-align: left;
+}
+.impar{
+    background-color: #ffffcc;
+}
