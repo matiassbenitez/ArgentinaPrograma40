@@ -6,9 +6,6 @@
             <file>file:/C:/Users/user/Downloads/JPA/JPAv2/src/META-INF/persistence.xml</file>
             <file>file:/C:/Users/user/Downloads/JPA/JPAv2/src/JPA_Ejemplo_2/persistencia/MascotaDAO.java</file>
         </group>
-        <group>
-            <file>file:/D:/Users/MATIAS/Documents/ArgentinaPrograma40/backend%20II/clases/clase%2044-45-46-47-48-49-50-51-52-53/JPA-master/JPA_Ejemplo_SIN_Herencia/src/JPA_Ejemplo_2/persistencia/DireccionDAO.java</file>
-            <file>file:/D:/Users/MATIAS/Documents/ArgentinaPrograma40/backend%20II/clases/clase%2044-45-46-47-48-49-50-51-52-53/JPA-master/JPA_Ejemplo_SIN_Herencia/src/JPA_Ejemplo_2/persistencia/MascotaDAO.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

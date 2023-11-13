@@ -1,0 +1,3 @@
+model map
+
+sirven para insertar toda la informacion que vamos a mostrar por pantalla
